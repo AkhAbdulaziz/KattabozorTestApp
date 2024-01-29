@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface MainService {
 
     @GET("hh/test/api/v1/offers")
-    suspend fun getDataList(): Response<ResponseData>
+    suspend fun getProducts(): Response<ResponseData>
 }

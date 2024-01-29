@@ -7,9 +7,9 @@ import androidx.annotation.Keep
 @Keep
 data class Image(
     @SerializedName("width")
-    val width: Int?,
+    val width: Int,
     @SerializedName("height")
-    val height: Int?,
+    val height: Int,
     @SerializedName("url")
     val url: String?
 )

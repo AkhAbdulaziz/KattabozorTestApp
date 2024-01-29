@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TestApp</string>
+
+    <string name="no_internet">Internet is not available</string>
+    <string name="successfully_online">You are successfully online!</string>
 </resources>
