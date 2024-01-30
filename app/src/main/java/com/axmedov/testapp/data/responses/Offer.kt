@@ -1,8 +1,8 @@
 package com.axmedov.testapp.data.responses
 
-
 import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
+import java.io.Serializable
 
 @Keep
 data class Offer(
@@ -20,4 +20,4 @@ data class Offer(
     val attributes: List<Attribute?>?,
     @SerializedName("image")
     val image: Image?
-)
+) : Serializable

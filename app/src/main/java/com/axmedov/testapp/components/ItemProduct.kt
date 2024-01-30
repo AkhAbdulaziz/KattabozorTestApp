@@ -18,6 +18,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.axmedov.testapp.R
@@ -56,6 +58,7 @@ fun ItemProduct(offer: Offer, modifier: Modifier = Modifier) {
                         )
                     ),
                     fontWeight = FontWeight.Bold,
+                    fontSize = TextUnit(12f, TextUnitType.Sp),
                     modifier = Modifier.padding(start = 12.dp, end = 12.dp, bottom = 8.dp)
                 )
             }

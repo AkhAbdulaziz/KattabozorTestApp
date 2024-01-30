@@ -162,7 +162,8 @@ private fun ItemDetails(title: String, description: String) {
                 .fillMaxWidth()
                 .background(Color.Transparent)
                 .padding(8.dp),
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            fontSize = TextUnit(14f, TextUnitType.Sp)
         )
     }
 }

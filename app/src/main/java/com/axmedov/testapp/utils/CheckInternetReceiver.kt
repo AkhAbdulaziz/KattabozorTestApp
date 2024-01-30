@@ -9,14 +9,20 @@ import dagger.hilt.android.AndroidEntryPoint
  * CreatedBy: Abdulaziz Akhmedov
  */
 
-private var internetConnectionListener: ((Boolean) -> Unit)? = null
-fun setInternetConnectionListener(f: (Boolean) -> Unit) {
-    internetConnectionListener = f
+private var internetHomeConnectionListener: ((Boolean) -> Unit)? = null
+fun setInternetHomeConnectionListener(f: (Boolean) -> Unit) {
+    internetHomeConnectionListener = f
+}
+
+private var internetMainActivityConnectionListener: ((Boolean) -> Unit)? = null
+fun setInternetMainActivityConnectionListener(f: (Boolean) -> Unit) {
+    internetMainActivityConnectionListener = f
 }
 
 fun checkInternetConnection() {
     timber("Called checkInternetConnection() method. Result=${isConnected()}", "sdjskjdksjd")
-    internetConnectionListener?.invoke(isConnected())
+    internetHomeConnectionListener?.invoke(isConnected())
+    internetMainActivityConnectionListener?.invoke(isConnected())
 }
 
 @AndroidEntryPoint

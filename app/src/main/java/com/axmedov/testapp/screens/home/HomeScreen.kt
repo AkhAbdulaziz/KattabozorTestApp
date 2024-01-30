@@ -43,7 +43,7 @@ private fun HomeScreenContent(viewModel: HomeViewModel) {
             TopBar(text = "Products", backButtonEnabled = false)
 
             LazyVerticalStaggeredGrid(
-                columns = StaggeredGridCells.Adaptive(180.dp),
+                columns = StaggeredGridCells.Adaptive(140.dp),
                 verticalItemSpacing = 8.dp,
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 content = {

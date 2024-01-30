@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Icon
@@ -41,11 +42,16 @@ fun TopBar(
                     )
                 )
             )
-            .padding(16.dp)
     ) {
         if (backButtonEnabled) {
-            IconButton(onClick = { onBackButtonClick() }) {
+            IconButton(
+                modifier = Modifier
+                    .align(Alignment.CenterStart)
+                    .padding(start = 8.dp),
+                onClick = { onBackButtonClick() }
+            ) {
                 Icon(
+                    modifier = Modifier.size(24.dp),
                     imageVector = Icons.Default.ArrowBack,
                     contentDescription = "Back",
                     tint = Color.White
@@ -58,7 +64,7 @@ fun TopBar(
             color = Color.White,
             textAlign = TextAlign.Center,
             modifier = Modifier.align(Alignment.Center),
-            fontSize = TextUnit(20f, TextUnitType.Sp)
+            fontSize = TextUnit(18f, TextUnitType.Sp)
         )
     }
 }
